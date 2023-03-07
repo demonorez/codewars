@@ -24,3 +24,8 @@ function abbrevName(name){
 
 console.log(abbrevName("Robert Frost"))
 
+// Write a function "greet" that returns "hello world!"
+
+function greet(){
+  return "hello world!"
+}
