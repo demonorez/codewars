@@ -29,3 +29,12 @@ console.log(abbrevName("Robert Frost"))
 function greet(){
   return "hello world!"
 }
+
+// create a function which returns an RNA sequence from the given DNA sequence
+// 3/7/2023 codewar Challenge
+function DNAtoRNA(dna) {
+  let rna = dna.replace(/T/g, "U")
+  return rna
+}
+
+console.log(DNAtoRNA("TTTT"));
