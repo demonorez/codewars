@@ -96,3 +96,8 @@ function hoopCount (n) {
 }
 
 console.log(hoopCount(10));
+
+// Easier solution 
+// function hoopCount (n) {
+//   return (n < 10) ? 'Keep at it until you get it' : 'Great, now move on to tricks';
+// }
