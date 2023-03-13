@@ -101,3 +101,10 @@ console.log(hoopCount(10));
 // function hoopCount (n) {
 //   return (n < 10) ? 'Keep at it until you get it' : 'Great, now move on to tricks';
 // }
+
+// 3/13/2023
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+function makeNegative(num) {
+  return num < 0 ? num : -num;
+}
