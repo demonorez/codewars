@@ -108,3 +108,15 @@ console.log(hoopCount(10));
 function makeNegative(num) {
   return num < 0 ? num : -num;
 }
+
+// 3/14/2023 
+// Messi goals function
+// Messi is a soccer player with goals in three leagues:
+
+// LaLiga
+// Copa del Rey
+// Champions
+// Complete the function to return his total number of goals in all three leagues.
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return sum = laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
