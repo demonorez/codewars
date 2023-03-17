@@ -132,3 +132,8 @@ function disemvowel(str) {
   let newStr = str.replace(/a/g, '').replace(/A/g, '').replace(/E/g, '').replace(/e/g, '').replace(/i/g, '').replace(/I/g, '').replace(/o/g, '').replace(/O/g, '').replace(/u/g, '').replace(/U/g, '')
   return newStr;
 }
+
+//A much simpler solution below
+// function disemvowel(str) {
+//   return str.replace(/[aeiou]/gi, '');
+// }
