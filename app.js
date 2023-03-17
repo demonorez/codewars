@@ -120,3 +120,15 @@ function makeNegative(num) {
 function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return sum = laLigaGoals + copaDelReyGoals + championsLeagueGoals
 }
+
+// 3/17/2023
+// Trolls are attacking your comment section!
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+  let newStr = str.replace(/a/g, '').replace(/A/g, '').replace(/E/g, '').replace(/e/g, '').replace(/i/g, '').replace(/I/g, '').replace(/o/g, '').replace(/O/g, '').replace(/u/g, '').replace(/U/g, '')
+  return newStr;
+}
