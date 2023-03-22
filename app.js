@@ -215,3 +215,47 @@ const openOrSenior = data => {
   }
   return getOpenOrSenior;
 }
+
+// 3/22/2023  
+// In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
+
+// The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
+
+// Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
+
+// You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
+
+// The string has a length greater or equal to one and contains only letters from ato z.
+
+function printerError(s) {
+  let m = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i].charCodeAt() > 109 || s[i].charCodeAt() < 97) {
+      m++;
+    }
+  }
+  return m + '/' + s.length;
+}
+
+// Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+function longest(s1, s2) {
+  // your code
+  s3 = s1 + s2;
+  s4 = s3.split("");
+  s4 = s4.sort().filter(function(element, index, array){
+    return element !== array[index - 1];
+  });
+  return s4.join("");
+}
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+
+function findShort(s){
+  let words = s.split(' ')
+  let shortest = words.reduce((shortestWord, currentWord) => {
+    return currentWord.length < shortestWord.length ? currentWord : shortestWord
+  }, words[0])
+  return shortest.length
+}
