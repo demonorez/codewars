@@ -304,3 +304,28 @@ function isTriangle(a,b,c)
 {
   return a + b > c && a + c > b && c + b > a;
 }
+
+// 3/29/2023
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+
+// function removeEveryOther(arr){
+//   return arr.filter(function(elem, index) {
+//     return index % 2 === 0;
+//   });
+// }
+
+// You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+
+// Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+
+// Function should return true if it is possible and false if not.
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  if (fuelLeft * mpg >= distanceToPump) return true
+  else return false
+};
