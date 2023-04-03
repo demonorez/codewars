@@ -338,3 +338,50 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 function booleanToString(b){
   return b.toString()
 }
+
+// 4/3/2023
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+function solution(str, ending){
+  return str.endsWith(ending);
+}
+
+// Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
+
+// Create a function with two arguments that will return an array of the first n multiples of x.
+
+// Assume both the given number and the number of times to count will be positive numbers greater than 0.
+
+// Return the results as an array or list ( depending on language ).
+
+function countBy(x, n) {
+  var z = [];
+  for (i = 1; i <= n; i++) {
+      z.push(x * i);
+  }
+  return z;
+}
+
+//After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+// You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+// Write a code that gives out the total amount for different days(d).
+
+function rentalCarCost(d) {
+  let discount = 0
+  if (d >= 7) {
+    discount = 50
+  } 
+  if (d >= 3 && d <7) {
+    discount = 20
+    }
+  let total = (40 * d) - discount
+  return total
+}
